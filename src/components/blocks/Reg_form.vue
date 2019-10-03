@@ -138,8 +138,8 @@ export default {
         },
     },
     methods: {
-        sendHandler() {
-            this.$v.$touch();
+        async sendHandler() {
+            await this.$v.$touch();
             if (!this.$v.form.$invalid) {
                 this.$emit('registration', this.form);
                 this.close();

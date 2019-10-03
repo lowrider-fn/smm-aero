@@ -82,7 +82,7 @@ export default {
     },
     mounted() {
         if (this.validate) {
-            const isHave = (el, substr) => !el.includes(substr);
+            const isHave = (el, substr) => el.includes(substr);
             this.keys = Object.keys(this.validate).filter(el => !isHave(el, '$') && !isHave(el, 'err') && !isHave(el, 'required'));
         }
     },
