@@ -1,8 +1,16 @@
 import {
     helpers,
+    required,
+    email,
+    minLength,
+    maxLength,
 } from 'vuelidate/lib/validators';
 
-const vErr = {
+const vuelidate = {
+    email,
+    required,
+    minLength,
+    maxLength,
     errEmail: {
         required : 'Введите E-mail',
         email    : 'Введите коректный E-mail',
@@ -19,7 +27,8 @@ const vErr = {
         text: 'Необходимо согласие',
     },
     transport: msgs => helpers.withParams(msgs, () => true),
+
 };
 
-export default vErr;
+export default vuelidate;
 

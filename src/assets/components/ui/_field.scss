@@ -50,6 +50,11 @@
 .field__input-wrapper {
     position : relative;
     width : 100%;
+    &.error {
+        .field__input {
+            border : 2px solid $red;
+        }
+    }
 }
 .snake {
     @include transform(translate3d(0, 0, 0));

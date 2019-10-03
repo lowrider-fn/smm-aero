@@ -3,6 +3,6 @@ module.exports = {
         open: true,
     },
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/sms-aero/'
+        ? '/smm-aero/'
         : '/',
 };

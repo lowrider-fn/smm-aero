@@ -37,7 +37,8 @@
             >
                 <label class="text"
                        for="police"
-                >Я принимаю условия
+                >
+                    Я принимаю условия
                     <a href="#"
                        target="_blank"
                        class="link "
@@ -50,7 +51,7 @@
                 <button class="btn-blue btn-blue--l"
                         type="button"
                         title="Зарегистрироваться в SMM Aero"
-                        @click="emitHandler()"
+                        @click="sendHandler()"
                 >
                     Регистрация
                 </button>
@@ -77,12 +78,9 @@
 import { Field, FieldPwd } from '@/components/ui/field';
 import Checkbox from '@/components/ui/Checkbox';
 import Modal from '@/components/blocks/Modal';
-import { addClass, removeClass } from '@/lib/class_operation';
-import {
-    required, email, minLength, maxLength,
-} from 'vuelidate/lib/validators';
 
-import vErr from '@/lib/vuelidate_error';
+import vibrate from '@/lib/vibrate';
+import vuelidate from '@/lib/vuelidate_error';
 
 export default {
     name      : 'RegForm',
@@ -118,48 +116,45 @@ export default {
     },
     validations: {
         form: {
-            required,
-            email: {
-                required,
-                maxLength: maxLength(60),
-                email,
-                err      : vErr.transport(vErr.errEmail),
+            required: vuelidate.required,
+            email   : {
+                required : vuelidate.required,
+                maxLength: vuelidate.maxLength(60),
+                email    : vuelidate.email,
+                err      : vuelidate.transport(vuelidate.errEmail),
             },
             pwd: {
-                required,
-                maxLength: maxLength(32),
-                minLength: minLength(6),
-                err      : vErr.transport(vErr.errPwd),
+                required: vuelidate.required,
+
+                maxLength: vuelidate.maxLength(32),
+                minLength: vuelidate.minLength(6),
+                err      : vuelidate.transport(vuelidate.errPwd),
             },
             chb: {
-                checked: val => val === true,
-                err    : vErr.transport(vErr.errChb),
+                checked: val => !!val,
+                err    : vuelidate.transport(vuelidate.errChb),
 
             },
         },
     },
     methods: {
-        emitHandler() {
+        sendHandler() {
+            this.$v.$touch();
             if (!this.$v.form.$invalid) {
                 this.$emit('registration', this.form);
                 this.close();
             } else {
-                const fields = this.$el.querySelectorAll('.js-field');
-                fields.forEach((el) => {
-                    addClass(el, 'snake');
-                    setTimeout(() => {
-                        removeClass(el, 'snake');
-                    }, 500);
-                });
+                vibrate(this.$el, '.error.js-field');
             }
         },
         close() {
             this.form = { ...this.default };
             this.$emit('update:isHide', false);
+            this.$v.$reset();
         },
         showLogin() {
             this.$emit('showLogin');
-            this.$emit('update:isHide', false);
+            this.close();
         },
     },
 };

@@ -42,8 +42,11 @@ export default {
     },
     data() {
         return {
-            isShowPwd: '',
+            isShowPwd: false,
         };
+    },
+    beforeDestroy() {
+        this.isShowPwd = false;
     },
     methods: {
         changeType() {

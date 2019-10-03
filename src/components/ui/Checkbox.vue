@@ -39,8 +39,9 @@ export default {
 
     computed: {
         isError() {
+            const { $invalid, $dirty } = this.validate;
             if (this.validate) {
-                return this.validate.$invalid;
+                return $invalid && $dirty;
             }
             return false;
         },

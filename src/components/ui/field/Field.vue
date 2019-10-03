@@ -5,8 +5,9 @@
         </label>
         <div :id="id"
              class="field__input-wrapper js-field"
+             :class="`${isError ? 'error': ''}` "
         >
-            <input :class="`field__input ${isError ? 'error': ''} `"
+            <input class="field__input "
                    :type="`${isShowPwd ? 'text' :type}`"
                    :placeholder="placeholder"
                    :value="value"
@@ -55,8 +56,9 @@ export default {
     },
     computed: {
         isError() {
+            const { $invalid, $dirty } = this.validate;
             if (this.validate) {
-                return this.validate.$invalid;
+                return $invalid && $dirty;
             }
             return false;
         },
@@ -79,9 +81,9 @@ export default {
         },
     },
     mounted() {
-        if (this.isError) {
+        if (this.validate) {
             const isHave = (el, substr) => !el.includes(substr);
-            this.keys = Object.keys(this.validate).filter(el => isHave(el, '$') && isHave(el, 'err') && isHave(el, 'required'));
+            this.keys = Object.keys(this.validate).filter(el => !isHave(el, '$') && !isHave(el, 'err') && !isHave(el, 'required'));
         }
     },
 };

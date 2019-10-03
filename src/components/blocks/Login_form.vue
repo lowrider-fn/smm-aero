@@ -23,10 +23,10 @@
                       :placeholder="'●●●●●●●●●●●'"
             />
             <div class="auth__btn">
-                <button class="btn-blue btn-blue--l"
+                <button class="btn-green btn-green--l"
                         type="button"
                         title="Войти в личный кабинет"
-                        @click="emitHandler()"
+                        @click="sendHandler()"
                 >
                     Вход
                 </button>
@@ -62,13 +62,10 @@
 
 <script>
 import { Field, FieldPwd } from '@/components/ui/field';
-
 import Modal from '@/components/blocks/Modal';
-import {
-    required, email, minLength, maxLength,
-} from 'vuelidate/lib/validators';
-import vErr from '@/lib/vuelidate_error';
-import { addClass, removeClass } from '@/lib/class_operation';
+
+import vuelidate from '@/lib/vuelidate_error';
+import vibrate from '@/lib/vibrate';
 
 export default {
     name      : 'RegForm',
@@ -101,44 +98,40 @@ export default {
     },
     validations: {
         form: {
-            required,
+            required: vuelidate.required,
+
             email: {
-                required,
-                maxLength: maxLength(60),
-                email,
-                err      : vErr.transport(vErr.errEmail),
+                required : vuelidate.required,
+                maxLength: vuelidate.maxLength(60),
+                email    : vuelidate.email,
+                err      : vuelidate.transport(vuelidate.errEmail),
             },
             pwd: {
-                required,
-                maxLength: maxLength(32),
-                minLength: minLength(6),
-                err      : vErr.transport(vErr.errPwd),
+                required : vuelidate.required,
+                maxLength: vuelidate.maxLength(32),
+                minLength: vuelidate.minLength(6),
+                err      : vuelidate.transport(vuelidate.errPwd),
             },
         },
     },
     methods: {
-        emitHandler() {
+        sendHandler() {
+            this.$v.$touch();
             if (!this.$v.form.$invalid) {
                 this.$emit('login', this.form);
                 this.close();
             } else {
-                const fields = this.$el.querySelectorAll('.js-field');
-                fields.forEach((el) => {
-                    addClass(el, 'snake');
-                    setTimeout(() => {
-                        removeClass(el, 'snake');
-                    }, 500);
-                });
+                vibrate(this.$el, '.error.js-field');
             }
         },
         close() {
             this.form = { ...this.default };
-
             this.$emit('update:isHide', false);
+            this.$v.$reset();
         },
         showReg() {
             this.$emit('showReg');
-            this.$emit('update:isHide', false);
+            this.close();
         },
     },
 };
