@@ -1,0 +1,7 @@
+.not-found__inner {
+    @include inner();
+
+@include flex;
+
+@include justify-content(center);
+}

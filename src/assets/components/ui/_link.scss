@@ -1,0 +1,17 @@
+.link {
+    @include hover {
+        color : $light-blue;
+    }
+
+@include transition;
+
+    text-decoration : underline;
+    color : $blue;
+    font-size : 13px;
+    font-weight : normal;
+    line-height : 20px;
+
+    &:visited {
+        color : $dark-blue;
+    }
+}

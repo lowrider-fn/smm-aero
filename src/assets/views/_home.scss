@@ -1,0 +1,7 @@
+.home__inner {
+    @include inner;
+    .h1 {
+        text-align : center;
+    }
+}
+

@@ -1,0 +1,19 @@
+.form {
+    .h2 ,
+    .text {
+        text-align : center;
+    }
+}
+.form__row {
+    @include  flex-wrap (wrap);
+
+@include justify-content (flex-end);
+
+@include  flex ;
+
+    padding : 5px;
+
+    .btn {
+        margin : 10px;
+    }
+}

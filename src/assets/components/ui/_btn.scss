@@ -1,0 +1,120 @@
+
+.btn {
+    @include transition;
+
+    display : inline-block;
+    margin : 0;
+    padding : 0;
+    cursor : pointer;
+    text-transform : capitalize;
+    border : none;
+    border-radius : $br;
+    outline : none;
+    background : transparent;
+    font-weight : 200;
+    line-height : 20px;
+
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -ms-appearance : none;
+    -o-appearance : none;
+    appearance : none;
+
+    .left {
+        margin-right : 7px;
+    }
+    .right {
+        margin-left : 7px;
+    }
+}
+
+.btn-blue {
+    @include hover {
+        @include box-shadow(inset 0px -2px 0px $dark-blue);
+    }
+
+color : $white;
+    background : $blue;
+
+@extend .btn;
+
+    &:active {
+        color : $white;
+        background : $dark-blue;
+    }
+    &--l {
+        @include mobile {
+            width : 100%;
+        }
+
+width : 280px;
+        padding : 11px 20px;
+        font-size : 20px;
+    }
+}
+
+
+.btn-green {
+    @include hover {
+        @include box-shadow(inset 0px -2px 0px $green);
+    }
+
+color : $white;
+    background : $light-green;
+
+@extend .btn;
+
+    &:active {
+        color : $white;
+        background : $green;
+    }
+    &--s {
+        width : 130px;
+        padding : 10px 15px ;
+        font-size : 17px;
+    }
+    &--l {
+        @include mobile {
+            width : 100%;
+        }
+
+width : 280px;
+        padding : 11px 20px;
+        font-size : 20px;
+    }
+}
+
+.btn-link {
+    @include hover {
+        color : $light-blue;
+        border-bottom : dotted 1px $light-blue;
+    }
+
+color : $blue;
+    border-bottom : 1px dotted $blue;
+    border-radius : 0;
+    font-size : 13px;
+    font-weight : normal;
+    line-height : 20px;
+
+@extend .btn;
+
+    &:active {
+        color : $dark-blue;
+        border-bottom : dotted 1px $dark-blue;
+    }
+    &--dashed {
+        @include hover {
+            border-bottom : dashed 1px $light-blue;
+        }
+
+border-bottom : 1px dashed $blue;
+
+        &:active {
+            color : $dark-blue;
+            border-bottom : dashed 1px $dark-blue;
+        }
+    }
+}
+
+

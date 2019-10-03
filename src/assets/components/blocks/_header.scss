@@ -1,0 +1,26 @@
+.header {
+    box-shadow : 0 0 10px rgba(0,0,0,0.5);
+}
+.header__inner {
+    @include inner;
+
+@include flex;
+
+@include justify-content(flex-end);
+
+    padding-top : 20px;
+}
+.header__auth-box {
+    @include flex;
+
+@include flex-column;
+
+@include mobile {
+        @include justify-content(flex-end);
+    }
+
+    .btn-green {
+        margin-bottom : 15px;
+    }
+}
+

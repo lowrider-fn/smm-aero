@@ -1,0 +1,29 @@
+@mixin transition ( $prop : all,  $time : 0.3s,  $ease : linear) {
+    -webkit-transition : $prop  $time  $ease;
+    -o-transition : $prop  $time  $ease;
+    transition : $prop  $time  $ease;
+}
+
+@mixin transform( $params) {
+    -webkit-transform : $params;
+    -ms-transform : $params;
+    transform : $params;
+}
+
+@mixin box-shadow( $params) {
+    -webkit-box-shadow : $params;
+    box-shadow : $params;
+}
+
+@mixin animation( $params) {
+    -webkit-animation : $params;
+    animation : $params;
+}
+@mixin backface-visibility( $params) {
+    -webkit-backface-visibility : $params;
+    backface-visibility : $params;
+}
+@mixin perspective( $params) {
+    -webkit-perspective : $params;
+    perspective : $params;
+}
