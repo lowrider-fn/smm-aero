@@ -1,4 +1,4 @@
-# Vue quick
+# Vue quick [demo](https://lowrider-fn.github.io/smm-aero/#/home)
 
 ## Project setup
 ```
