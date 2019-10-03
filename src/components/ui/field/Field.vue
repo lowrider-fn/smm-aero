@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import vuelidate from '@/lib/vuelidate';
 
 export default {
     name : 'Field',
@@ -64,32 +65,10 @@ export default {
         },
         setErrorText() {
             if (this.isError) {
-                const { required, $params } = this.validate;
-
-                if (!required) {
-                    return $params.err.required;
-                }
-                let text;
-                this.keys.forEach((key) => {
-                    if (!this.validate[key]) {
-                        text = $params.err[key];
-                    }
-                });
-                return text;
+                return vuelidate.errText(this.validate);
             }
             return '';
         },
     },
-    mounted() {
-        if (this.validate) {
-            const isHave = (el, substr) => el.includes(substr);
-            this.keys = Object.keys(this.validate).filter(el => !isHave(el, '$') && !isHave(el, 'err') && !isHave(el, 'required'));
-        }
-    },
 };
 </script>
-
-<style lang="scss" scoped
->
-</style>
-

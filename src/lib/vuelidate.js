@@ -26,8 +26,28 @@ const vuelidate = {
     errChb: {
         text: 'Необходимо согласие',
     },
-    transport: msgs => helpers.withParams(msgs, () => true),
+    transport: (msgs, call) => helpers.withParams(msgs, () => (call ? call() : true)),
 
+    checked: val => !!val,
+
+    errKeys(v) {
+        const isNotHave = (el, substr) => !el.includes(substr);
+        return Object.keys(v).filter(el => isNotHave(el, '$') && isNotHave(el, 'err') && isNotHave(el, 'required'));
+    },
+
+    errText(v) {
+        const { required, $params } = v;
+        let text;
+        if (!required) {
+            return $params.err.required;
+        }
+        this.errKeys(v).forEach((key) => {
+            if (!v[key]) {
+                text = $params.err[key];
+            }
+        });
+        return text;
+    },
 };
 
 export default vuelidate;

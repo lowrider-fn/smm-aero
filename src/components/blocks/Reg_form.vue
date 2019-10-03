@@ -80,7 +80,7 @@ import Checkbox from '@/components/ui/Checkbox';
 import Modal from '@/components/blocks/Modal';
 
 import vibrate from '@/lib/vibrate';
-import vuelidate from '@/lib/vuelidate_error';
+import vuelidate from '@/lib/vuelidate';
 
 export default {
     name      : 'RegForm',
@@ -131,7 +131,7 @@ export default {
                 err      : vuelidate.transport(vuelidate.errPwd),
             },
             chb: {
-                checked: val => !!val,
+                checked: vuelidate.checked,
                 err    : vuelidate.transport(vuelidate.errChb),
 
             },

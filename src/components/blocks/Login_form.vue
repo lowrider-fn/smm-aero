@@ -64,7 +64,7 @@
 import { Field, FieldPwd } from '@/components/ui/field';
 import Modal from '@/components/blocks/Modal';
 
-import vuelidate from '@/lib/vuelidate_error';
+import vuelidate from '@/lib/vuelidate';
 import vibrate from '@/lib/vibrate';
 
 export default {

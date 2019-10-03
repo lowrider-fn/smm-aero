@@ -5,9 +5,9 @@ const vibrate = (el, selector) => {
     const fields = el.querySelectorAll(selector);
 
     fields.forEach((el) => {
-        addClass(el, 'snake');
+        addClass(el, 'vibration');
         setTimeout(() => {
-            removeClass(el, 'snake');
+            removeClass(el, 'vibration');
         }, 500);
     });
 };
