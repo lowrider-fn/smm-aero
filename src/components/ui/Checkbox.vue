@@ -16,13 +16,14 @@
         <p v-if="isError"
            class="field__error"
         >
-            {{ setErrorText }}
+            {{ vuelidate.errText(validate) }}
         </p>
     </div>
 </template>
 
 <script>
 import Icon from '@/components/ui/icon';
+import vuelidate from '@/lib/vuelidate';
 
 export default {
     components: {
@@ -36,20 +37,14 @@ export default {
         },
         id: String,
     },
-
+    data() {
+        return {
+            vuelidate,
+        };
+    },
     computed: {
         isError() {
-            const { $invalid, $dirty } = this.validate;
-            if (this.validate) {
-                return $invalid && $dirty;
-            }
-            return false;
-        },
-        setErrorText() {
-            if (this.isError) {
-                return this.validate.$params.err.text;
-            }
-            return '';
+            return this.vuelidate.isError(this.validate);
         },
     },
 };

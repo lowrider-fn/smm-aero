@@ -23,7 +23,6 @@
             />
             <FieldPwd v-model.trim="$v.form.pwd.$model"
                       :id="'pwd'"
-
                       :value="$v.form.pwd.$model"
                       :type="'password'"
                       :validate="$v.form.pwd"
@@ -121,18 +120,17 @@ export default {
                 required : vuelidate.required,
                 maxLength: vuelidate.maxLength(60),
                 email    : vuelidate.email,
-                err      : vuelidate.transport(vuelidate.errEmail),
+                $err     : vuelidate.errEmail(),
             },
             pwd: {
-                required: vuelidate.required,
-
+                required : vuelidate.required,
                 maxLength: vuelidate.maxLength(32),
                 minLength: vuelidate.minLength(6),
-                err      : vuelidate.transport(vuelidate.errPwd),
+                $err     : vuelidate.errPwd(),
             },
             chb: {
                 checked: vuelidate.checked,
-                err    : vuelidate.transport(vuelidate.errChb),
+                $err   : vuelidate.errChb(),
 
             },
         },

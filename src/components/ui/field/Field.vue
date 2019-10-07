@@ -19,7 +19,7 @@
         <p v-if="isError"
            class="field__error"
         >
-            {{ setErrorText }}
+            {{ vuelidate.errText(validate) }}
         </p>
     </div>
 </template>
@@ -52,22 +52,12 @@ export default {
     },
     data() {
         return {
-            keys: [],
+            vuelidate,
         };
     },
     computed: {
         isError() {
-            const { $invalid, $dirty } = this.validate;
-            if (this.validate) {
-                return $invalid && $dirty;
-            }
-            return false;
-        },
-        setErrorText() {
-            if (this.isError) {
-                return vuelidate.errText(this.validate);
-            }
-            return '';
+            return this.vuelidate.isError(this.validate);
         },
     },
 };

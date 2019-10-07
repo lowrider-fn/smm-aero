@@ -35,6 +35,7 @@
 		"vue/attribute-hyphenation":0,
 		"guard-for-in":0,
 		"vue/html-quotes":0,
+		"no-plusplus":0,
 		"vue/html-self-closing":[ 
 			"error",
 			{ 
