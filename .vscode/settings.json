@@ -1,0 +1,16 @@
+{
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "stylelint.autoFixOnSave": true,
+  "redhat.telemetry.enabled": true,
+  "editor.tabSize": 2,
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+}

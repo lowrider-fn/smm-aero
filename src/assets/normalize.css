@@ -1,0 +1,104 @@
+body,
+html {
+  overflow: hidden;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#app {
+  height: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+a > * {
+  transition: all 0.3s linear;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+pre {
+  margin: 0;
+}
+
+input {
+  padding: 0;
+  border: none;
+  margin: 0;
+  appearance: none;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+textarea {
+  overflow: auto;
+  padding: 0;
+  border: none;
+  margin: 0;
+  box-shadow: none;
+  outline: none;
+  resize: none;
+  transition: all 0.3s linear;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+svg {
+  overflow: visible;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
