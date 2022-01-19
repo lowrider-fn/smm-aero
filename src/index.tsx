@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { createBrowserHistory } from 'history';
 
 import App from './App';

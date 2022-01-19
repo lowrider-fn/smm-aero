@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/smm-aero/static/css/main.684b1bdb.css",
-    "main.js": "/smm-aero/static/js/main.677ef7be.js",
-    "smm-aero/static/js/307.756fca38.chunk.js": "/smm-aero/static/js/307.756fca38.chunk.js",
-    "smm-aero/static/js/547.31579d39.chunk.js": "/smm-aero/static/js/547.31579d39.chunk.js",
-    "smm-aero/static/js/415.89d56c7f.chunk.js": "/smm-aero/static/js/415.89d56c7f.chunk.js",
-    "smm-aero/static/media/Ubuntu-Light.ttf": "/smm-aero/static/media/Ubuntu-Light.c2bf1bb61db6c8149ae8.ttf",
-    "smm-aero/static/media/Ubuntu-LightItalic.ttf": "/smm-aero/static/media/Ubuntu-LightItalic.76a3c21f3329a4e182f5.ttf",
-    "smm-aero/static/media/Ubuntu-Italic.ttf": "/smm-aero/static/media/Ubuntu-Italic.682cce1357f664304864.ttf",
-    "smm-aero/static/media/Ubuntu-MediumItalic.ttf": "/smm-aero/static/media/Ubuntu-MediumItalic.092271697eb05e6bdf12.ttf",
-    "smm-aero/static/media/Ubuntu-Regular.ttf": "/smm-aero/static/media/Ubuntu-Regular.fbdecfce69a96dc73e2a.ttf",
-    "smm-aero/static/media/Ubuntu-Medium.ttf": "/smm-aero/static/media/Ubuntu-Medium.90c045b7547db9275807.ttf",
-    "smm-aero/static/media/Ubuntu-BoldItalic.ttf": "/smm-aero/static/media/Ubuntu-BoldItalic.dac91249ebba5d371231.ttf",
-    "smm-aero/static/media/Ubuntu-Bold.ttf": "/smm-aero/static/media/Ubuntu-Bold.50114233a7432c29c43d.ttf",
-    "smm-aero/static/media/user.svg": "/smm-aero/static/media/user.ab6e08fc9dd0eaffdf0734729150278b.svg",
-    "smm-aero/static/media/eye-crossed.svg": "/smm-aero/static/media/eye-crossed.2370e32806144f33c9c40d47d7dfdc8c.svg",
+    "main.css": "/static/css/main.684b1bdb.css",
+    "main.js": "/static/js/main.ea0fd183.js",
+    "static/js/307.756fca38.chunk.js": "/static/js/307.756fca38.chunk.js",
+    "static/js/547.31579d39.chunk.js": "/static/js/547.31579d39.chunk.js",
+    "static/js/415.89d56c7f.chunk.js": "/static/js/415.89d56c7f.chunk.js",
+    "static/media/Ubuntu-Light.ttf": "/static/media/Ubuntu-Light.c2bf1bb61db6c8149ae8.ttf",
+    "static/media/Ubuntu-LightItalic.ttf": "/static/media/Ubuntu-LightItalic.76a3c21f3329a4e182f5.ttf",
+    "static/media/Ubuntu-Italic.ttf": "/static/media/Ubuntu-Italic.682cce1357f664304864.ttf",
+    "static/media/Ubuntu-MediumItalic.ttf": "/static/media/Ubuntu-MediumItalic.092271697eb05e6bdf12.ttf",
+    "static/media/Ubuntu-Regular.ttf": "/static/media/Ubuntu-Regular.fbdecfce69a96dc73e2a.ttf",
+    "static/media/Ubuntu-Medium.ttf": "/static/media/Ubuntu-Medium.90c045b7547db9275807.ttf",
+    "static/media/Ubuntu-BoldItalic.ttf": "/static/media/Ubuntu-BoldItalic.dac91249ebba5d371231.ttf",
+    "static/media/Ubuntu-Bold.ttf": "/static/media/Ubuntu-Bold.50114233a7432c29c43d.ttf",
+    "static/media/user.svg": "/static/media/user.ab6e08fc9dd0eaffdf0734729150278b.svg",
+    "static/media/eye-crossed.svg": "/static/media/eye-crossed.2370e32806144f33c9c40d47d7dfdc8c.svg",
     "index.html": "/index.html",
-    "smm-aero/static/media/accept.svg": "/smm-aero/static/media/accept.583632c03b890c8f4b5e9398c291fdd5.svg",
-    "smm-aero/static/media/eye.svg": "/smm-aero/static/media/eye.b54af142d0a04b269ca975f77f1fe417.svg",
-    "smm-aero/static/media/close.svg": "/smm-aero/static/media/close.5a880daf56a232f1d689153d50a51740.svg"
+    "static/media/accept.svg": "/static/media/accept.583632c03b890c8f4b5e9398c291fdd5.svg",
+    "static/media/eye.svg": "/static/media/eye.b54af142d0a04b269ca975f77f1fe417.svg",
+    "static/media/close.svg": "/static/media/close.5a880daf56a232f1d689153d50a51740.svg"
   },
   "entrypoints": [
-    "smm-aero/static/css/main.684b1bdb.css",
-    "smm-aero/static/js/main.677ef7be.js"
+    "static/css/main.684b1bdb.css",
+    "static/js/main.ea0fd183.js"
   ]
 }
