@@ -126,12 +126,12 @@ ${({ position }) => {
           flex-direction: row-reverse;
 
           & svg {
-            margin-right: 7px;
+            margin-right: 0.7rem;
           }
         `) ||
         css`
           & svg {
-            margin-left: 7px;
+            margin-left: 0.7rem;
           }
         `;
     }

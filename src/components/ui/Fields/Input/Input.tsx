@@ -2,10 +2,9 @@
 import { v4 as uuid } from 'uuid';
 
 import { FormField } from '../common/FormField';
-import { Button } from '../../Button';
 import { DynamicInput } from '../common/DynamicInput';
 
-import { BoxStyled } from './styled';
+import { BoxStyled, ButtonStyled } from './styled';
 
 import type { InputProps } from './interfaces';
 import type { ChangeEvent } from 'react';
@@ -54,7 +53,7 @@ export const Input = <T,>({
         />
 
         { icon && (
-          <Button
+          <ButtonStyled
             mode='icon'
             icon={ icon }
             onClick={ onIconClick }

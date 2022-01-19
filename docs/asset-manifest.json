@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/smm-aero/static/css/main.684b1bdb.css",
-    "main.js": "/smm-aero/static/js/main.ea0fd183.js",
+    "main.js": "/smm-aero/static/js/main.13221726.js",
     "smm-aero/static/js/307.756fca38.chunk.js": "/smm-aero/static/js/307.756fca38.chunk.js",
     "smm-aero/static/js/547.31579d39.chunk.js": "/smm-aero/static/js/547.31579d39.chunk.js",
     "smm-aero/static/js/415.89d56c7f.chunk.js": "/smm-aero/static/js/415.89d56c7f.chunk.js",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "smm-aero/static/css/main.684b1bdb.css",
-    "smm-aero/static/js/main.ea0fd183.js"
+    "smm-aero/static/js/main.13221726.js"
   ]
 }

@@ -22,7 +22,7 @@ export const Button = ({
     mode={ mode }
     size={ size }
     type={ type }
-    position={ (icon && position) || undefined }
+    position={ (icon && text && position) || undefined }
     onClick={ onClick }
   >
     { text && (
