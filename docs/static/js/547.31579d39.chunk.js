@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksmm_aero=self.webpackChunksmm_aero||[]).push([[547],{5547:function(e,s,t){t.r(s);var n=t(4243),r=t(7347),u=t(6417);s.default=function(){return(0,u.jsx)(n.qb,{children:(0,u.jsx)(r.xv,{tag:"h1",size:"h1",text:"\u041f\u0440\u043e\u0444\u0438\u043b\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f"})})}}}]);

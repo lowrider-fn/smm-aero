@@ -1,10 +1,7 @@
 {
   "files": {
     "main.css": "/smm-aero/static/css/main.684b1bdb.css",
-    "main.js": "/smm-aero/static/js/main.f12fdb2a.js",
-    "smm-aero/static/js/307.756fca38.chunk.js": "/smm-aero/static/js/307.756fca38.chunk.js",
-    "smm-aero/static/js/547.31579d39.chunk.js": "/smm-aero/static/js/547.31579d39.chunk.js",
-    "smm-aero/static/js/415.89d56c7f.chunk.js": "/smm-aero/static/js/415.89d56c7f.chunk.js",
+    "main.js": "/smm-aero/static/js/main.21295638.js",
     "smm-aero/static/media/Ubuntu-Light.ttf": "/smm-aero/static/media/Ubuntu-Light.c2bf1bb61db6c8149ae8.ttf",
     "smm-aero/static/media/Ubuntu-LightItalic.ttf": "/smm-aero/static/media/Ubuntu-LightItalic.76a3c21f3329a4e182f5.ttf",
     "smm-aero/static/media/Ubuntu-Italic.ttf": "/smm-aero/static/media/Ubuntu-Italic.682cce1357f664304864.ttf",
@@ -22,6 +19,6 @@
   },
   "entrypoints": [
     "smm-aero/static/css/main.684b1bdb.css",
-    "smm-aero/static/js/main.f12fdb2a.js"
+    "smm-aero/static/js/main.21295638.js"
   ]
 }
