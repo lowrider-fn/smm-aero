@@ -4,7 +4,7 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  // "editor.formatOnSave": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
   },
@@ -13,4 +13,16 @@
   "editor.tabSize": 2,
   "git.confirmSync": false,
   "diffEditor.ignoreTrimWhitespace": false,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  }
 }

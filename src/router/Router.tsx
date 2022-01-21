@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router';
 
 import { ROUTES } from './constants';
 import { PrivateRoute } from './components/PrivateRoute';

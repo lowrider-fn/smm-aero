@@ -1,4 +1,4 @@
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router';
 
 import type { FC } from 'react';
 import type { RedirectedRouteProps } from './interfaces';

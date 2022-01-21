@@ -242,10 +242,19 @@
       "error",
       "never"
     ],
-    "react/jsx-curly-spacing": [2, {"when": "always", "children": true}, {
-      "allowMultiline": false,
-      "spacing": {"objectLiterals": "always"}
-    }],
+    "react/jsx-curly-spacing": [
+      2,
+      {
+        "when": "always",
+        "children": true
+      },
+      {
+        "allowMultiline": false,
+        "spacing": {
+          "objectLiterals": "always"
+        }
+      }
+    ],
     "react/jsx-boolean-value": "off",
     "react/jsx-closing-bracket-location": "error",
     "react/jsx-closing-tag-location": "error",
