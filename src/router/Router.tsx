@@ -1,33 +1,51 @@
-import { observer } from 'mobx-react-lite';
-import { Switch, Route } from 'react-router';
+import { Route, Routes } from 'react-router';
 
 import { ROUTES } from './constants';
 import { PrivateRoute } from './components/PrivateRoute';
 import { GuestRoute } from './components/GuestRoute';
-import { PublicRoute } from './components/PublicRoute';
-import { preparesPage } from './utils';
+import { RedirectRoute } from './components/RedirectRoute';
 
 import type { RouterProps } from './interfaces';
+ 
+import NotFoundPage from '@/pages/NotFound';
 
-export const Router = observer(({ routes = ROUTES }: RouterProps) => (
-  <Switch>
+export const Router = ({ routes = ROUTES }: RouterProps) => (
+  <Routes>
     {
       routes.map(route => {
         const { meta, path } = route;
 
         if (meta.auth) {
-          return <PrivateRoute { ...route } key={ path } />;
+          return (
+            <Route
+              key={ path }
+              path={ path }
+              element={ <PrivateRoute { ...route } /> } 
+            />
+          );
         }
 
         if (meta.guest) {
-          return <GuestRoute { ...route } key={ path } />;
+          return (
+            <Route
+              key={ path }
+              path={ path }
+              element={ <GuestRoute { ...route } /> }
+            />
+          );
         }
-
-        return <PublicRoute { ...route } key={ path } />;
+        
+        return (
+          <Route
+            key={ path }
+            path={ path }
+            element={ <RedirectRoute { ...route } /> }
+          />
+        );
       })
-    }
+    }    
 
-    <Route component={ preparesPage(import('@/pages/NotFound')) } />
-  </Switch>
-));
+    <Route path='*' element={ <NotFoundPage /> } />  
+  </Routes>
+);
 

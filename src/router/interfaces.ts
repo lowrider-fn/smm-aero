@@ -4,17 +4,9 @@ export interface RouteMeta {
   guest?: boolean;
 }
 
-export interface LocationState {
-  from: {
-    pathname: string;
-  };
-}
-
 export interface RouteItem {
   path: string;
-  exact?: boolean;
   Component: React.ComponentType<any>;
-  defaultRoute?: boolean;
   meta: RouteMeta;
 }
 

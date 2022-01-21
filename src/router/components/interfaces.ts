@@ -1,8 +1,7 @@
 
 import type { RouteItem } from '../interfaces';
 
-export interface RedirectedRouteProps {
-  condition: boolean;
-  redirect: string;
-  routeProps: RouteItem & { location?: any };
+export interface RedirectRouteProps extends RouteItem{
+  middleware?: boolean;
+  to?: string;
 }

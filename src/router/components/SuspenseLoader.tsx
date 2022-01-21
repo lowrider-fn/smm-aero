@@ -1,10 +1,14 @@
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
-import type { ComponentType } from 'react';
+import type { FC, ComponentType } from 'react';
 
-export const SuspenseLoader = <T,>(Component: ComponentType) => (props: T) => (
-  <Suspense fallback={ <div>Загрузка</div> }>
-    <Component { ...props } />
-  </Suspense>
-);
+export const SuspenseLoader: FC<{ component: Promise<{ default: ComponentType<any> }> }> = ({ children, component }) => {
+  const comp = lazy(() => component);
+  
+  return (
+    <Suspense fallback={ <div>Загрузка</div> }>
+      { children || comp }
+    </Suspense>
+  );
+};
 

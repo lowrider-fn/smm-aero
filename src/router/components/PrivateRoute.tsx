@@ -4,18 +4,18 @@ import { RoutePath } from '../interfaces';
 
 import { RedirectRoute } from './RedirectRoute';
 
-import type { RedirectedRouteProps } from './interfaces';
+import type { RouteItem } from '../interfaces';
 
 import { AuthStore } from '@/store';
 
-export const PrivateRoute = observer((props: RedirectedRouteProps['routeProps']) => {
+export const PrivateRoute = observer((props: RouteItem) => {
   const { isAuth } = AuthStore;
 
   return (
-    <RedirectRoute
-      routeProps={ props }
-      redirect={ RoutePath.Main }
-      condition={ isAuth }
+    <RedirectRoute 
+      { ...props }
+      to={ RoutePath.Main }
+      middleware={ isAuth }
     />
   );
 });

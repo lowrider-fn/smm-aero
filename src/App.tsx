@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite';
 import { ThemeProvider } from 'styled-components';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 import { RoutePath, Router } from './router';
 import { theme } from './utils/theme';
@@ -12,7 +12,7 @@ import type { SigninDataType, SignupDataType } from '@/store';
 import { AuthStore } from '@/store';
 
 const App = observer(() => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const {
     isAuth,
     signin,
@@ -22,17 +22,17 @@ const App = observer(() => {
 
   const handleLogout = () => {
     logout();
-    history.push(RoutePath.Main);
+    navigate(RoutePath.Main);
   };
 
   const handleSignup = (data: SignupDataType) => {
     signup(data);
-    history.push(RoutePath.Profile);
+    navigate(RoutePath.Profile);
   };
 
   const handleSignin = (data: SigninDataType) => {
     signin(data);
-    history.push(RoutePath.Profile);
+    navigate(RoutePath.Profile);
   };
 
   return (

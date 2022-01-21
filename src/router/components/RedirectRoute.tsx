@@ -1,22 +1,16 @@
-import { Route, Redirect } from 'react-router';
+import { Navigate } from 'react-router';
 
-import type { FC } from 'react';
-import type { RedirectedRouteProps } from './interfaces';
+import type { RedirectRouteProps } from './interfaces';
 
-export const RedirectRoute: FC<RedirectedRouteProps> = ({ condition, redirect, routeProps }) => {
-  const { Component, ...restProps } = routeProps;
-  const { location, meta } = routeProps;
-
-  const to = (!location && redirect) || { pathname: redirect, state: { from: location } };
-
+export const RedirectRoute = ({
+  middleware = true, 
+  to = '', 
+  meta,
+  Component 
+}: RedirectRouteProps ) => {
   if (meta.title) {
     document.title = meta.title;
   }
 
-  return (
-    <Route
-      { ...restProps }
-      render={ props => (condition && <Component { ...props } />) || <Redirect to={ to } /> }
-    />
-  );
+  return ( middleware && <Component /> ) || <Navigate to={ to } /> ;
 };
