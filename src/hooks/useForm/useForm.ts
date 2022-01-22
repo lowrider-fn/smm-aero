@@ -51,7 +51,7 @@ export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialVali
 
   const resetForm = () => {
     setForm({ ...initialForm });
-    Object.keys(validation).forEach(name => changeValidation(name as keyof E));
+    Object.keys(validation).forEach(name => changeValidation(<keyof E>name));
   };
 
   return {

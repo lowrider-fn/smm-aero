@@ -1,22 +1,20 @@
 import { RoutePath } from './interfaces';
+import { lazy } from './utils';
 
 import type { RouteItem } from './interfaces';
-
-import HomePage from '@/pages/Home';
-import ProfilePage from '@/pages/Profile';
-
-// const Profile = lazy(()=> import('@/pages/Profile'));
-// const Home = lazy(()=> import('@/pages/Home'));
+ 
+const Profile = lazy(import('@/pages/Profile'));
+const Home = lazy(import('@/pages/Home'));
 
 export const ROUTES: Array<RouteItem> = [
   {
     path     : RoutePath.Main,
-    Component: HomePage,
+    Component: Home,
     meta     : { title: 'Главная' }
   },
   {
     path     : RoutePath.Profile,
-    Component: ProfilePage,
+    Component: Profile,
     meta     : {
       auth : true,
       title: 'Профиль'
