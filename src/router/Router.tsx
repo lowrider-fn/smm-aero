@@ -6,8 +6,6 @@ import { GuestRoute } from './components/GuestRoute';
 import { RedirectRoute } from './components/RedirectRoute';
 
 import type { RouterProps } from './interfaces';
- 
-import NotFoundPage from '@/pages/NotFound';
 
 export const Router = ({ routes = ROUTES }: RouterProps) => (
   <Routes>
@@ -44,8 +42,6 @@ export const Router = ({ routes = ROUTES }: RouterProps) => (
         );
       })
     }    
-
-    <Route path='*' element={ <NotFoundPage /> } />  
   </Routes>
 );
 

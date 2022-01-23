@@ -16,5 +16,6 @@ export interface RouterProps {
 
 export enum RoutePath {
   Main = '/',
+  NotFound = '*',
   Profile = '/profile'
 }
