@@ -1,5 +1,5 @@
 
-import type { RouteItem } from '../interfaces';
+import type { RouteItem } from '../../interfaces';
 
 export interface RedirectRouteProps extends RouteItem{
   middleware?: boolean;
