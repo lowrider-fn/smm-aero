@@ -10,7 +10,7 @@
     "postinstall": "husky install && chmod ug+x .husky/*",
     "types": "tsc --noEmit",
     "lint": "eslint --quiet --fix --ext .js,.ts,.tsx .",
-    "stylelint": "stylelint 'src/**/{styled.ts,*.css}' --fix",
+    "stylelint": "stylelint src/**/{styled.ts,*.css} --fix",
     "start": "PORT=8080 FAST_REFRESH=false NODE_ENV=development craco start --config craco.config.js",
     "build": "CI=false GENERATE_SOURCEMAP=false NODE_ENV=production craco build --config craco.config.js",
     "reinstall": "yarn cache clean --force && rm -rf node_modules yarn.lock && yarn"
