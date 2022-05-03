@@ -54,7 +54,10 @@
         "prev": [
           "const",
           "let",
-          "var"
+          "var",
+          "case",
+          "default",
+          "multiline-block-like",
         ],
         "next": "*"
       },
@@ -79,8 +82,7 @@
       {
         "blankLine": "always",
         "prev": [
-          "case",
-          "default"
+          "multiline-const"
         ],
         "next": "*"
       }

@@ -21,6 +21,7 @@ export const Header = ({
     toggleShowingSignup();
     onSignup(data);
   };
+
   const handleSignin = (data: SigninDataType) => {
     toggleShowingSignin();
     onSignin(data);
