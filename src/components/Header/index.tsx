@@ -17,44 +17,44 @@ export const Header = ({
   const { isShow: isShowSignup, toggleShowing: toggleShowingSignup } = useToggle();
   const { isShow: isShowSignin, toggleShowing: toggleShowingSignin } = useToggle();
 
-  const handleSignup = (data: SignupDataType)=>{
+  const handleSignup = (data: SignupDataType) => {
     toggleShowingSignup();
     onSignup(data);
   };
-
-  const handleSignin = (data: SigninDataType)=>{
+  const handleSignin = (data: SigninDataType) => {
     toggleShowingSignin();
     onSignin(data);
   };
+
   return (
     <HeaderStyled>
       <NavStyled>
         {
           (isAuth && (
             <Button
-              mode='success'
-              size='m'
+              mode="success"
+              size="m"
               text="Выйти"
-              title='Выйти из личного кабинета'
+              title="Выйти из личного кабинета"
               onClick={ onLogout }
             />
           ))
           || (
             <ControlsStyled>
               <Button
-                title='Войти в личный кабинет'
-                mode='success'
-                size='m'
+                title="Войти в личный кабинет"
+                mode="success"
+                size="m"
                 text="Войти"
-                icon='user'
-                position='left'
+                icon="user"
+                position="left"
                 onClick={ toggleShowingSignin }
               />
 
               <Button
-                mode='link-dotted'
-                text='Зарегистрироваться'
-                title='Зарегистрироваться в SMM Aero'
+                mode="link-dotted"
+                text="Зарегистрироваться"
+                title="Зарегистрироваться в SMM Aero"
                 onClick={ toggleShowingSignup }
               />
             </ControlsStyled>
@@ -80,4 +80,3 @@ export const Header = ({
     </HeaderStyled>
   );
 };
-

@@ -31,8 +31,8 @@ export const BoxStyled = styled.div<Pick<InputProps<null>, 'iconSide' >>`
     ${ButtonStyled} {
       left: 1.3rem;
     }
-  `) ||
-  css`
+  `)
+  || css`
     & input {
       padding-right: 3.2rem;
     }
@@ -43,4 +43,3 @@ export const BoxStyled = styled.div<Pick<InputProps<null>, 'iconSide' >>`
   `}
 
 `;
-

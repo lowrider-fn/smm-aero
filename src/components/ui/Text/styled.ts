@@ -8,8 +8,8 @@ export const TextStyled = styled.p<Pick<TextProps, 'weight' | 'margin' | 'size'>
   line-height: 1.2;
 
   ${({ margin, theme }) => css`
-    margin: ${ margin};
-    font-family: ${ theme.font};
+    margin: ${margin};
+    font-family: ${theme.font};
   `}
 
   ${({ size, weight }) => {
@@ -38,15 +38,15 @@ export const TextStyled = styled.p<Pick<TextProps, 'weight' | 'margin' | 'size'>
           font-weight: ${weight || 400};
         `;
 
-      case TextSize.m:
-        return css`
-          font-size: 1.6rem;
-          font-weight: ${weight || 300};
-        `;
-
       case TextSize.l:
         return css`
           font-size: 2rem;
+          font-weight: ${weight || 300};
+        `;
+
+      default:
+        return css`
+          font-size: 1.6rem;
           font-weight: ${weight || 300};
         `;
     }

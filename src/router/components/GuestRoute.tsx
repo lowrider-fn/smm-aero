@@ -12,7 +12,7 @@ export const GuestRoute = observer((props: RouteItem) => {
   const { isAuth } = AuthStore;
 
   return (
-    <RedirectRoute 
+    <RedirectRoute
       { ...props }
       to={ RoutePath.Main }
       middleware={ !isAuth }

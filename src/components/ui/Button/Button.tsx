@@ -32,4 +32,3 @@ export const Button = ({
     { icon && <Icon icon={ icon } /> }
   </ButtonStyled>
 );
-

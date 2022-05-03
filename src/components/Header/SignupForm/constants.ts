@@ -37,4 +37,3 @@ export const VALIDATION: ValidationType<typeof SignupFieldName> = {
     schema : boolean().oneOf([true], 'Необходимо согласие')
   }
 };
-

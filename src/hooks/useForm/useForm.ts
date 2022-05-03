@@ -1,4 +1,3 @@
-
 import isEqual from 'lodash.isequal';
 import { useState } from 'react';
 
@@ -64,4 +63,3 @@ export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialVali
     validateForm
   };
 }
-

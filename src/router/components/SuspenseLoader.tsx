@@ -7,4 +7,3 @@ export const SuspenseLoader = <T,>(Component: ComponentType<T>) => (props: T) =>
     <Component { ...props } />
   </Suspense>
 );
-

@@ -1,4 +1,3 @@
-
 import { v4 as uuid } from 'uuid';
 
 import { FormField } from '../common/FormField';
@@ -54,7 +53,7 @@ export const Input = <T,>({
 
         { icon && (
           <ButtonStyled
-            mode='icon'
+            mode="icon"
             icon={ icon }
             onClick={ onIconClick }
           />

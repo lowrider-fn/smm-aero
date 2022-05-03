@@ -19,10 +19,15 @@ export const Icon = ({
 
   switch (icon) {
     case IconGlyph.eye: return <IconEye { ...props } />;
+
     case IconGlyph.eyeCrossed: return <IconEyeCrossed { ...props } />;
+
     case IconGlyph.user: return <IconUser { ...props } />;
+
     case IconGlyph.close: return <IconClose { ...props } />;
+
     case IconGlyph.accept: return <IconAccept { ...props } />;
+
     default: return null;
   }
 };

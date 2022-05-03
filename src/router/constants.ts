@@ -2,7 +2,7 @@ import { RoutePath } from './interfaces';
 import { lazy } from './utils';
 
 import type { RouteItem } from './interfaces';
- 
+
 const Profile = lazy(import('@/pages/Profile'));
 const NotFound = lazy(import('@/pages/NotFound'));
 const Home = lazy(import('@/pages/Home'));

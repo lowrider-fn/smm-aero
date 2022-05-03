@@ -1,4 +1,3 @@
-
 import { FormField } from '../common/FormField';
 import { Text } from '../../Text';
 import { DynamicInput } from '../common/DynamicInput';
@@ -38,7 +37,7 @@ export const Checkbox = <T,>({
       <LabelStyled disabled={ disabled }>
 
         <CheckboxStyled>
-          <IconStyled icon='accept' checked={ checked } />
+          <IconStyled icon="accept" checked={ checked } />
 
           <DynamicInput
             { ...rest }

@@ -7,9 +7,9 @@ export const breakpoints = {
   laptop    : '120rem'
 };
 
-const min = (key: ThemeBreakpont)=> `@media screen and (min-width: ${breakpoints[key]})`;
+const min = (key: ThemeBreakpont) => `@media screen and (min-width: ${breakpoints[key]})`;
 
-const max = (key: ThemeBreakpont)=> `@media screen and (max-width: ${breakpoints[key]})`;
+const max = (key: ThemeBreakpont) => `@media screen and (max-width: ${breakpoints[key]})`;
 
 const mobile = max('mobile');
 const tabletMini = max('tabletMini');

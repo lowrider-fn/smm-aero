@@ -10,4 +10,3 @@ export interface CheckboxProps<T> extends CheckboxPropsType {
   content?: string;
   onChange: (checked: boolean, name: T) => void;
 }
-

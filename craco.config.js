@@ -15,7 +15,9 @@ module.exports = {
     },
 
     configure: (config, { paths }) => {
-      paths.appBuild = config.output.path = path.resolve('docs');
+      config.output.path = path.resolve('docs');
+
+      paths.appBuild = config.output.path;
 
       return config;
     }

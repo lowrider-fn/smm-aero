@@ -42,15 +42,17 @@ export const SignupForm = ({ onSubmit, onClose, onSignin }: SignupFormProps) => 
       onClose={ onClose }
     >
       <DescriptionStyled>
-        Регистрация занимает 30 секунд.<br />
-        После регистрации вы получите<br />
-        <TextGreenStyled tag='span' text="7 дней бесплатного доступа." />
+        Регистрация занимает 30 секунд.
+        <br />
+        После регистрации вы получите
+        <br />
+        <TextGreenStyled tag="span" text="7 дней бесплатного доступа." />
       </DescriptionStyled>
 
       <Input
-        autoComplete='new-email'
+        autoComplete="new-email"
         label="Почта"
-        placeholder='pochtagmail.com'
+        placeholder="pochtagmail.com"
         name={ SignupFieldName.email }
         value={ form.email }
         hasError={ email.hasErr }
@@ -59,9 +61,9 @@ export const SignupForm = ({ onSubmit, onClose, onSignin }: SignupFormProps) => 
       />
 
       <InputPassword
-        autoComplete='new-password'
+        autoComplete="new-password"
         label="Пароль"
-        placeholder='●●●●●●●●●●●'
+        placeholder="●●●●●●●●●●●"
         name={ SignupFieldName.password }
         value={ form.password }
         hasError={ password.hasErr }
@@ -77,13 +79,15 @@ export const SignupForm = ({ onSubmit, onClose, onSignin }: SignupFormProps) => 
         onChange={ changeFormField }
       >
         <TextGreyStyled>
-          Я принимаю условия <Link to="#" text='Соглашения' />
+          Я принимаю условия
+          { ' ' }
+          <Link to="#agreement" text="Соглашения" />
         </TextGreyStyled>
       </Checkbox>
 
       <Button
-        title='Зарегистрироваться в SMM Aero'
-        size='l'
+        title="Зарегистрироваться в SMM Aero"
+        size="l"
         type="submit"
         text="Регистрация"
       />
@@ -92,8 +96,8 @@ export const SignupForm = ({ onSubmit, onClose, onSignin }: SignupFormProps) => 
         <TextGreyStyled text="Уже есть аккаунт?" />
 
         <Button
-          title='Войти в личный кабинет'
-          mode='link-dashed'
+          title="Войти в личный кабинет"
+          mode="link-dashed"
           text="Войти в личный кабинет"
           onClick={ handleSignin }
         />

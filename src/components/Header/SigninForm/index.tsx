@@ -41,7 +41,7 @@ export const SigninForm = ({ onSubmit, onClose, onSignup }: SigninFormProps) => 
     >
       <Input
         label="Почта"
-        placeholder='pochtagmail.com'
+        placeholder="pochtagmail.com"
         name={ SigninFieldName.email }
         value={ form.email }
         hasError={ email.hasErr }
@@ -50,9 +50,9 @@ export const SigninForm = ({ onSubmit, onClose, onSignup }: SigninFormProps) => 
       />
 
       <InputPassword
-        autoComplete='new-password'
+        autoComplete="new-password"
         label="Пароль"
-        placeholder='●●●●●●●●●●●'
+        placeholder="●●●●●●●●●●●"
         name={ SigninFieldName.password }
         value={ form.password }
         hasError={ password.hasErr }
@@ -61,9 +61,9 @@ export const SigninForm = ({ onSubmit, onClose, onSignup }: SigninFormProps) => 
       />
 
       <ButtonStyled
-        title='Войти в личный кабинет'
-        mode='success'
-        size='l'
+        title="Войти в личный кабинет"
+        mode="success"
+        size="l"
         type="submit"
         text="Вход"
       />
@@ -73,8 +73,8 @@ export const SigninForm = ({ onSubmit, onClose, onSignup }: SigninFormProps) => 
           <TextGreyStyled text="Еще нет аккаунта?" />
 
           <Button
-            title='Зарегистрироваться в SMM Aero'
-            mode='link-dashed'
+            title="Зарегистрироваться в SMM Aero"
+            mode="link-dashed"
             text="Зарегистрироваться"
             onClick={ handleSignin }
           />
@@ -84,8 +84,8 @@ export const SigninForm = ({ onSubmit, onClose, onSignup }: SigninFormProps) => 
           <TextGreyStyled text="Забыли пароль?" />
 
           <Button
-            title='Востановить пароль'
-            mode='link-dashed'
+            title="Востановить пароль"
+            mode="link-dashed"
             text="Восстановить"
             onClick={ handleSignin }
           />

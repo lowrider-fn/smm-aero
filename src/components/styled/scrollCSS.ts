@@ -18,6 +18,7 @@ export const scrollCSS = css`
 
   ${({ theme }) => {
     const { palette } = theme;
+
     return css`
       &:hover {
         scrollbar-color: ${palette.grey.base} transparent;

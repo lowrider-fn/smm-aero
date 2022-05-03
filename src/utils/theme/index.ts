@@ -19,4 +19,3 @@ export const theme: DefaultTheme = {
   palette,
   media
 };
-

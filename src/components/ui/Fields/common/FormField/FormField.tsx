@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 import { FieldStyled, FormFieldStyled, LabelStyled, TextStyled } from './styled';
@@ -42,7 +41,7 @@ export const FormField: FC<PropsWithClassName<FormFieldProps>> = ({
       <FieldStyled>
         { children }
 
-        { errorText && <TextStyled size='xs' text={ errorText } /> }
+        { errorText && <TextStyled size="xs" text={ errorText } /> }
       </FieldStyled>
     </FormFieldStyled>
   );

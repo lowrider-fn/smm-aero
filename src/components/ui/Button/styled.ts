@@ -1,9 +1,6 @@
-
 import styled, { css } from 'styled-components';
 
-import { ButtonIconPosition } from './';
-
-import { ButtonMode } from './interfaces';
+import { ButtonIconPosition, ButtonMode } from './interfaces';
 
 import type { ButtonProps } from './interfaces';
 
@@ -17,11 +14,11 @@ const ButtonCSS = css`
   }
 
   ${({ theme }) => {
-    const { borderRadius, palette } = theme ;
+    const { borderRadius, palette } = theme;
 
     return css`
-      border-radius: ${ borderRadius.l};
-      color: ${ palette.common.white};
+      border-radius: ${borderRadius.l};
+      color: ${palette.common.white};
     `;
   }}
 `;
@@ -34,7 +31,7 @@ const LinkCSS = css`
   user-select: none;
 
   ${({ theme }) => {
-    const { palette, media } = theme ;
+    const { palette, media } = theme;
 
     const { base, dark, light } = palette.blue;
 
@@ -42,7 +39,7 @@ const LinkCSS = css`
       border-color: ${base};
       color: ${base};
 
-      ${ media.hover(`
+      ${media.hover(`
         border-color: ${light};
         color: ${light};
       `)}
@@ -62,21 +59,6 @@ ${({ theme, mode }) => {
     const { blue, green } = palette;
 
     switch (mode) {
-      case ButtonMode.info:
-        return css`
-          ${ButtonCSS}
-
-          background: ${blue.base};
-
-          ${media.hover(`
-            box-shadow: ${shadows.blueDark};
-          `)}
-
-          &:active {
-            background: ${blue.dark};
-          }
-        `;
-
       case ButtonMode.success:
         return css`
           ${ButtonCSS}
@@ -117,19 +99,34 @@ ${({ theme, mode }) => {
             opacity: 0.3;
           }
         `;
+
+      default:
+        return css`
+    ${ButtonCSS}
+
+    background: ${blue.base};
+
+    ${media.hover(`
+      box-shadow: ${shadows.blueDark};
+    `)}
+
+    &:active {
+      background: ${blue.dark};
+    }
+  `;
     }
   }}
 
 ${({ position }) => {
-    if (position ){
+    if (position) {
       return (position === ButtonIconPosition.left && css`
           flex-direction: row-reverse;
 
           & svg {
             margin-right: 0.7rem;
           }
-        `) ||
-        css`
+        `)
+        || css`
           & svg {
             margin-left: 0.7rem;
           }
@@ -138,20 +135,22 @@ ${({ position }) => {
   }}
 
 ${({ size, mode }) => {
-    if (mode && [ButtonMode.success, ButtonMode.info].includes(mode as ButtonMode)){
+    if (mode && [ButtonMode.success, ButtonMode.info].includes(mode as ButtonMode)) {
       switch (size) {
         case 's':
           return css`
             padding: 1rem 1.5rem;
           `;
-        case 'm':
-          return css`
-            padding: 1.15rem 2.5rem;
-          `;
+
         case 'l':
           return css`
             width: 100%;
             padding: 1rem 1.5rem;
+          `;
+
+        default:
+          return css`
+            padding: 1.15rem 2.5rem;
           `;
       }
     }

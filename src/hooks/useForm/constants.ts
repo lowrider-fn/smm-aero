@@ -1,4 +1,3 @@
-
 import { string, addMethod } from 'yup';
 
 import { YupMethod } from './interfaces';
@@ -26,4 +25,3 @@ addMethod(string, YupMethod.checkEmail, function () {
     test   : val => Boolean(val && EMAIL_REG.test(val))
   });
 });
-

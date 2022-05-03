@@ -28,8 +28,8 @@ export const IconStyled = styled(Icon) <Pick<CheckboxProps<null>, 'checked'>>`
       z-index: ${zIndex.medium};
       color: ${palette.common.white};
 
-      ${(checked && css`opacity: 1;`) ||
-      css`
+      ${(checked && css`opacity: 1;`)
+      || css`
         color: transparent;
         cursor: pointer;
         opacity: 0;

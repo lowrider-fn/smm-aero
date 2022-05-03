@@ -26,4 +26,3 @@ export const VALIDATION: ValidationType<typeof SigninFieldName> = {
       .required(REQUIRED_TEXT_PASSWORD)
   }
 };
-

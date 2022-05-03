@@ -49,7 +49,7 @@ const App = observer(() => {
       <MainStyled>
         <InnerStyled>
           <Router />
-        </InnerStyled> 
+        </InnerStyled>
       </MainStyled>
     </ThemeProvider>
   );

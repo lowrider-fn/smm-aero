@@ -1,4 +1,3 @@
-
 export interface TextProps {
   size?: keyof typeof TextSize;
   weight?: 200 | 300 | 400 | 500;

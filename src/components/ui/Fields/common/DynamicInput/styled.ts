@@ -77,4 +77,3 @@ ${({ type, hasError, theme }) => {
     `;
   }}
 `;
-

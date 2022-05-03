@@ -1,4 +1,3 @@
-
 export interface SigninDataType {
   email: string;
   password: string;

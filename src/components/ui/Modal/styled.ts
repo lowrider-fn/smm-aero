@@ -33,7 +33,7 @@ export const ModalStyled = styled.div`
 
   ${scrollCSS}
 
-  ${({ theme })=> {
+  ${({ theme }) => {
     const { media, palette } = theme;
 
     return css`

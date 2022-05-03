@@ -18,7 +18,7 @@ export const Router = ({ routes = ROUTES }: RouterProps) => (
             <Route
               key={ path }
               path={ path }
-              element={ <PrivateRoute { ...route } /> } 
+              element={ <PrivateRoute { ...route } /> }
             />
           );
         }
@@ -32,7 +32,7 @@ export const Router = ({ routes = ROUTES }: RouterProps) => (
             />
           );
         }
-        
+
         return (
           <Route
             key={ path }
@@ -41,7 +41,6 @@ export const Router = ({ routes = ROUTES }: RouterProps) => (
           />
         );
       })
-    }    
+    }
   </Routes>
 );
-

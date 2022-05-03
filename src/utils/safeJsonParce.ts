@@ -9,4 +9,3 @@ export function safeJsonParce<T>(val: unknown): T | null {
 
   return null;
 }
-

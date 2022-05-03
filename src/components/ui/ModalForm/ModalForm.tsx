@@ -1,4 +1,3 @@
-
 import type { FC } from 'react';
 import type { ModalFormProps } from './interfaces';
 

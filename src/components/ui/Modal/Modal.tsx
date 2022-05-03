@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 
 import { ButtonStyled, ModalMaskStyled, ModalStyled, TitleStyled } from './styled';
@@ -25,6 +24,7 @@ export const Modal: FC<ModalProps> = ({
         onClose();
       }
     };
+
     document.addEventListener('keydown', handleKeydown);
 
     return () => {
@@ -36,7 +36,7 @@ export const Modal: FC<ModalProps> = ({
   return (
     <ModalMaskStyled ref={ modalRef } onMouseDown={ handleClose }>
       <ModalStyled>
-        <ButtonStyled mode='icon' icon='close' onClick={ onClose } />
+        <ButtonStyled mode="icon" icon="close" onClick={ onClose } />
 
         <TitleStyled
           tag="h2"
