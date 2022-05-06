@@ -1,5 +1,6 @@
 {
   "parserOptions": {
+    "root": true,
     "ecmaVersion": 2021,
     "ecmaFeatures": {
       "jsx": true
