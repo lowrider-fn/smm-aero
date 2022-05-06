@@ -10,7 +10,7 @@ import type { RouterProps } from './interfaces';
 export const Router = ({ routes = ROUTES }: RouterProps) => (
   <Routes>
     {
-      routes.map(route => {
+      routes.map((route) => {
         const { meta, path } = route;
 
         if (meta.auth) {

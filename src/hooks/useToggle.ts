@@ -7,7 +7,7 @@ export function useToggle(isOpen?: boolean) {
 
   const handleHide = () => setIsShow(false);
 
-  const toggleShowing = () => setIsShow(prev => !prev);
+  const toggleShowing = () => setIsShow((prev) => !prev);
 
   return {
     isShow,

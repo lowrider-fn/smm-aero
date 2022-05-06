@@ -29,6 +29,7 @@
         "generics": "ignore"
       }
     ],
+    "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
@@ -45,7 +46,7 @@
     "@typescript-eslint/no-throw-literal": "off",
     "arrow-parens": [
       "error",
-      "as-needed"
+      "always"
     ],
     "@typescript-eslint/padding-line-between-statements": [
       "error",
@@ -57,7 +58,7 @@
           "var",
           "case",
           "default",
-          "multiline-block-like",
+          "multiline-block-like"
         ],
         "next": "*"
       },

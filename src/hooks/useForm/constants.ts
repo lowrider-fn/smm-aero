@@ -14,7 +14,7 @@ addMethod(string, YupMethod.checkPwd, function () {
   return this.test({
     name   : YupMethod.checkPwd,
     message: 'Обязательно наличие цифр, символов, строчных и заглавных букв только латинского алфавита',
-    test   : val => Boolean(val && PWD_REG.test(val))
+    test   : (val) => Boolean(val && PWD_REG.test(val))
   });
 });
 
@@ -22,6 +22,6 @@ addMethod(string, YupMethod.checkEmail, function () {
   return this.test({
     name   : YupMethod.checkEmail,
     message: 'Введите корректный email',
-    test   : val => Boolean(val && EMAIL_REG.test(val))
+    test   : (val) => Boolean(val && EMAIL_REG.test(val))
   });
 });

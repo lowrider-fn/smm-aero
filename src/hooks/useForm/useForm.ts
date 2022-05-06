@@ -12,7 +12,7 @@ export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialVali
   const isValid = <V,>(value: V, name: keyof E) => validation[name].schema.isValidSync(value, validationContext);
 
   const changeValidation = (name: keyof E, hasErr = false, errText = '') => {
-    setValidation(validation => ({ ...validation, [name]: { ...validation[name], ...{ hasErr, errText } } }));
+    setValidation((validation) => ({ ...validation, [name]: { ...validation[name], ...{ hasErr, errText } } }));
   };
 
   const validate = <V,>(value: V, name: keyof E) => {
@@ -24,7 +24,7 @@ export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialVali
       .then(() => {
         changeValidation(name);
       })
-      .catch(err => {
+      .catch((err) => {
         if (value || !isValid(value, name)) {
           changeValidation(name, true, err.errors[0]);
         } else {
@@ -32,7 +32,7 @@ export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialVali
         }
       })
       .finally(() => {
-        dependences?.forEach(dep => validate(form[dep], dep));
+        dependences?.forEach((dep) => validate(form[dep], dep));
       });
   };
 
@@ -43,14 +43,14 @@ export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialVali
   };
 
   const changeFormField = (value: F[keyof E], name: keyof E) => {
-    setForm(form => ({ ...form, [name]: value }));
+    setForm((form) => ({ ...form, [name]: value }));
 
     validate(value, name);
   };
 
   const resetForm = () => {
     setForm({ ...initialForm });
-    Object.keys(validation).forEach(name => changeValidation(<keyof E>name));
+    Object.keys(validation).forEach((name) => changeValidation(<keyof E>name));
   };
 
   return {
