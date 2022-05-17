@@ -4,17 +4,15 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  // "stylelint.validate": [
-  //   "css",
-  //   "less",
-  //   "scss"
-  // ],
+  "stylelint.validate": [
+    "css",
+    "typescript"
+  ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    // "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": false
   },
-  "stylelint.autoFixOnSave": true,
   "redhat.telemetry.enabled": true,
   "editor.tabSize": 2,
   "git.confirmSync": false,
@@ -31,13 +29,10 @@
   "[typescriptreact]": {
     "editor.formatOnSave": false
   },
-  "[scss]": {
-    "editor.formatOnSave": false
-  },
   "[css]": {
-    "editor.formatOnSave": false
-  },
-  "[less]": {
-    "editor.formatOnSave": false
-  },
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  }
 }

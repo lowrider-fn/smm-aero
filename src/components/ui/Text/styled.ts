@@ -6,7 +6,6 @@ import type { TextProps } from './types';
 
 export const TextStyled = styled.p<Pick<TextProps, 'weight' | 'margin' | 'size'>>`
   line-height: 1.2;
-
   ${({ margin, theme }) => css`
     margin: ${margin};
     font-family: ${theme.font};

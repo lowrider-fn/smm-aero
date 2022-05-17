@@ -13,6 +13,7 @@ const ButtonCSS = css`
     font-weight: 200;
   }
 
+  /* stylelint-disable-next-line order/properties-order */
   ${({ theme }) => {
     const { borderRadius, palette } = theme;
 
@@ -29,7 +30,7 @@ const LinkCSS = css`
   border-radius: 0;
   text-transform: capitalize;
   user-select: none;
-
+  /* stylelint-disable-next-line order/properties-order */
   ${({ theme }) => {
     const { palette, media } = theme;
 
@@ -37,6 +38,8 @@ const LinkCSS = css`
 
     return css`
       border-color: ${base};
+
+      
       color: ${base};
 
       ${media.hover(`
@@ -53,7 +56,7 @@ const LinkCSS = css`
 `;
 
 export const ButtonStyled = styled.button<Pick<ButtonProps, 'size' | 'mode' | 'position'>>`
-${({ theme, mode }) => {
+  ${({ theme, mode }) => {
     const { palette, media, shadows } = theme;
 
     const { blue, green } = palette;
@@ -117,7 +120,7 @@ ${({ theme, mode }) => {
     }
   }}
 
-${({ position }) => {
+  ${({ position }) => {
     if (position) {
       return (position === ButtonIconPosition.left && css`
           flex-direction: row-reverse;
@@ -134,7 +137,7 @@ ${({ position }) => {
     }
   }}
 
-${({ size, mode }) => {
+  ${({ size, mode }) => {
     if (mode && [ButtonMode.success, ButtonMode.info].includes(mode as ButtonMode)) {
       switch (size) {
         case 's':

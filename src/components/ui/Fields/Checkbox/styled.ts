@@ -20,7 +20,6 @@ export const IconStyled = styled(Icon) <Pick<CheckboxProps<null>, 'checked'>>`
   opacity: 0;
   transition: all 0.3s ease;
   visibility: visible;
-
   ${({ theme, checked }) => {
     const { palette, zIndex } = theme;
 
@@ -43,7 +42,6 @@ export const LabelStyled = styled.label<Pick<CheckboxProps<null>, 'disabled'>>`
   display: inline-flex;
   align-items: center;
   user-select: none;
-
   ${({ disabled }) => disabled && css`
     cursor: not-allowed;
     opacity: 0.6;

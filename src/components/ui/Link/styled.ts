@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const LinkStyled = styled.a`
   text-decoration: underline;
-
   ${({ theme }) => {
     const { palette, media } = theme;
 

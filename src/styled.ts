@@ -11,7 +11,6 @@ export const GlobalStyle = createGlobalStyle`
 
 export const MainStyled = styled.main`
   ${scrollCSS}
-
   height: calc(100vh - 11rem);
 `;
 

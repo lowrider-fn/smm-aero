@@ -10,7 +10,6 @@ import type { InputProps } from './types';
 export const ButtonStyled = styled(Button)<Pick<ButtonProps, 'onClick'>>`
   position: absolute;
   pointer-events: none;
-
   ${({ onClick }) => onClick && css`
       pointer-events: all;
   `}
@@ -22,7 +21,6 @@ export const BoxStyled = styled.div<Pick<InputProps<null>, 'iconSide' >>`
   width: 100%;
   flex-direction: column;
   justify-content: center;
-
   ${({ iconSide }) => (iconSide && iconSide === IconSide.left && css`
     & input {
       padding-left: 3.2rem;
@@ -41,5 +39,4 @@ export const BoxStyled = styled.div<Pick<InputProps<null>, 'iconSide' >>`
       right: 1.3rem;
     }
   `}
-
 `;

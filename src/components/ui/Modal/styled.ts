@@ -13,7 +13,6 @@ export const ModalMaskStyled = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
-
   ${({ theme }) => {
     const { zIndex, palette } = theme;
 
@@ -30,9 +29,7 @@ export const ModalStyled = styled.div`
   max-width: 40rem;
   max-height: 80vh;
   padding: 4.4rem 5.6rem;
-
   ${scrollCSS}
-
   ${({ theme }) => {
     const { media, palette } = theme;
 

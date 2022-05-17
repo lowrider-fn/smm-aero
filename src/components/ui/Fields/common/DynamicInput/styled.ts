@@ -28,7 +28,7 @@ const snakeAnimation = keyframes`
 `;
 
 export const DynamicInputStyled = styled.input<DynamicInputProps>`
-${({ type, hasError, theme }) => {
+  ${({ type, hasError, theme }) => {
     const {
       palette, borderRadius, shadows, zIndex
     } = theme;
@@ -45,6 +45,8 @@ ${({ type, hasError, theme }) => {
           top: 0;
           left: 0;
           height: 100%;
+
+          
           border-radius: ${borderRadius.s};
           box-shadow: ${errColor || shadows.grey};
           cursor: pointer;

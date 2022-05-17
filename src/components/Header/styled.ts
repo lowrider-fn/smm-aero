@@ -8,7 +8,6 @@ export const HeaderStyled = styled.header`
   display: flex;
   height: 11.5rem;
   align-items: center;
-
   ${({ theme }) => {
     const { zIndex, palette, shadows } = theme;
 
@@ -22,7 +21,6 @@ export const HeaderStyled = styled.header`
 
 export const NavStyled = styled.nav`
   ${innerCSS}
-
   display: flex;
   justify-content: flex-end;
   padding-top: 2rem;

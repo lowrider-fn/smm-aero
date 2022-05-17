@@ -1,14 +1,32 @@
 {
   "extends": [
-    "stylelint-config-styled-components",
     "stylelint-config-idiomatic-order"
   ],
   "plugins": [
     "stylelint-order"
   ],
-  "syntax": [
-    "css",
-    "scss"
+  "overrides": [
+    {
+      "files": [
+        "**/styled.ts"
+      ],
+      "processors": [
+        "stylelint-processor-styled-components"
+      ],
+      "extends": [
+        "stylelint-config-recommended",
+        "stylelint-config-styled-components"
+      ],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": [
+        "**/*.css"
+      ],
+      "syntax": [
+        "css"
+      ]
+    }
   ],
   "rules": {
     "alpha-value-notation": [
@@ -108,7 +126,7 @@
         ]
       }
     ],
-    "font-family-name-quotes": null,
+    "font-family-name-quotes": "always-where-recommended",
     "font-family-no-duplicate-names": true,
     "font-family-no-missing-generic-family-keyword": true,
     "function-calc-no-unspaced-operator": true,
@@ -125,6 +143,7 @@
     "hue-degree-notation": "angle",
     "indentation": 2,
     "keyframe-declaration-no-important": true,
+    "keyframes-name-pattern": null,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
     "max-line-length": 140,
@@ -142,7 +161,7 @@
     "named-grid-areas-no-invalid": true,
     "no-descending-specificity": true,
     "no-duplicate-at-import-rules": true,
-    "no-duplicate-selectors": null,
+    "no-duplicate-selectors": true,
     "no-empty-first-line": null,
     "no-empty-source": true,
     "no-eol-whitespace": true,
@@ -206,6 +225,14 @@
     "string-quotes": "single",
     "unit-case": "lower",
     "unit-no-unknown": true,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": [
+          "dummyValue"
+        ]
+      }
+    ],
     "value-list-comma-newline-after": "always-multi-line",
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
