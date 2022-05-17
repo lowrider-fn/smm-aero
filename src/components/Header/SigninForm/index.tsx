@@ -6,7 +6,7 @@ import { InputPassword } from '../../ui/Fields/InputPassword';
 import { ControlsStyled, BoxStyled, TextGreyStyled, ButtonStyled } from './styled';
 import { INITIAL_FORM, VALIDATION } from './constants';
 
-import type { SigninFormProps } from './interfaces';
+import type { SigninFormProps } from './types';
 
 import { useForm } from '@/hooks/useForm';
 import { SigninFieldName } from '@/store';

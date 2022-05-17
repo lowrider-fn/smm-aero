@@ -1,7 +1,7 @@
 import { DynamicInputType } from '../common/DynamicInput';
 import { Input } from '../Input';
 
-import type { InputPasswordProps } from './interfaces';
+import type { InputPasswordProps } from './types';
 
 import { useToggle } from '@/hooks';
 

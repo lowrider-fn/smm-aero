@@ -29,19 +29,7 @@
     "alwaysStrict": true,
     "removeComments": true
   },
-  "watchOptions": {
-    "watchFile": "useFsEvents",
-    "watchDirectory": "useFsEvents",
-    "fallbackPolling": "dynamicPriority"
-  },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js"
-  ],
-  "exclude": [
-    "docs",
-    ".vscode",
-    ".husky"
+    "src"
   ]
 }

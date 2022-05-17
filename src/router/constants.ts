@@ -1,7 +1,7 @@
-import { RoutePath } from './interfaces';
+import { RoutePath } from './types';
 import { lazy } from './utils';
 
-import type { RouteItem } from './interfaces';
+import type { RouteItem } from './types';
 
 const Profile = lazy(import('@/pages/Profile'));
 const NotFound = lazy(import('@/pages/NotFound'));

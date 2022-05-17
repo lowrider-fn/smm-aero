@@ -1,12 +1,11 @@
 {
   "parserOptions": {
-    "root": true,
     "ecmaVersion": 2021,
     "ecmaFeatures": {
       "jsx": true
     },
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.eslint.json"
   },
   "parser": "@typescript-eslint/parser",
   "settings": {
@@ -24,6 +23,7 @@
     "plugin:react-hooks/recommended"
   ],
   "rules": {
+    "linebreak-style": "off",
     "@typescript-eslint/comma-dangle": [
       "error",
       {
@@ -111,7 +111,6 @@
       }
     ],
     "import/prefer-default-export": "off",
-    "jsx-a11y/no-autofocus": "off",
     "key-spacing": [
       "error",
       {
@@ -132,6 +131,10 @@
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true
       }
+    ],
+    "multiline-ternary": [
+      2,
+      "always-multiline"
     ],
     "no-implicit-coercion": [
       "error",
@@ -180,11 +183,21 @@
         }
       }
     ],
+    "react/jsx-curly-newline": [
+      "error",
+      {
+        "multiline": "forbid",
+        "singleline": "forbid"
+      }
+    ],
+    "react/jsx-newline": "error",
     "react/jsx-max-props-per-line": [
       "error",
       {
-        "maximum": 1,
-        "when": "multiline"
+        "maximum": {
+          "single": 2,
+          "multi": 1
+        }
       }
     ],
     "react/jsx-props-no-spreading": "off",

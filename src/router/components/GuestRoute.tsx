@@ -1,10 +1,10 @@
 import { observer } from 'mobx-react-lite';
 
-import { RoutePath } from '../interfaces';
+import { RoutePath } from '../types';
 
 import { RedirectRoute } from './RedirectRoute';
 
-import type { RouteItem } from '../interfaces';
+import type { RouteItem } from '../types';
 
 import { AuthStore } from '@/store';
 

@@ -14,6 +14,6 @@ export enum SignupFieldName {
   password = 'password'
 }
 
-export interface SignupDataType extends SigninDataType{
+export interface SignupDataType extends SigninDataType {
   agreement: boolean;
 }

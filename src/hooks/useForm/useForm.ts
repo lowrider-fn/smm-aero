@@ -1,7 +1,7 @@
 import isEqual from 'lodash.isequal';
 import { useState } from 'react';
 
-import type { DataType, ValidationType } from './interfaces';
+import type { DataType, ValidationType } from './types';
 
 export function useForm<F extends DataType<F, E>, E>(initialForm: F, initialValidation: ValidationType<E>) {
   const [form, setForm] = useState({ ...initialForm });

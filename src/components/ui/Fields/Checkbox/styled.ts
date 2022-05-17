@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { Icon } from '../../Icon';
 
-import type { CheckboxProps } from './interfaces';
+import type { CheckboxProps } from './types';
 
 export const CheckboxStyled = styled.div`
   position: relative;

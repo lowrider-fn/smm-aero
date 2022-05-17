@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { TextSize } from './interfaces';
+import { TextSize } from './types';
 
-import type { TextProps } from './interfaces';
+import type { TextProps } from './types';
 
 export const TextStyled = styled.p<Pick<TextProps, 'weight' | 'margin' | 'size'>>`
   line-height: 1.2;

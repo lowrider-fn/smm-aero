@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components';
 
 import { Button } from '../../Button';
 
-import { IconSide } from './interfaces';
+import { IconSide } from './types';
 
 import type { ButtonProps } from '../../Button';
-import type { InputProps } from './interfaces';
+import type { InputProps } from './types';
 
 export const ButtonStyled = styled(Button)<Pick<ButtonProps, 'onClick'>>`
   position: absolute;

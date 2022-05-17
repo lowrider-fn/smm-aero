@@ -5,7 +5,7 @@ import { DynamicInput } from '../common/DynamicInput';
 
 import { BoxStyled, ButtonStyled } from './styled';
 
-import type { InputProps } from './interfaces';
+import type { InputProps } from './types';
 import type { ChangeEvent } from 'react';
 
 export const Input = <T,>({

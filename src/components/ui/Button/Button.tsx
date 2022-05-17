@@ -3,7 +3,7 @@ import { Icon } from '../Icon';
 
 import { ButtonStyled } from './styled';
 
-import type { ButtonProps } from './interfaces';
+import type { ButtonProps } from './types';
 
 export const Button = ({
   className = '',
@@ -26,7 +26,11 @@ export const Button = ({
     onClick={ onClick }
   >
     { text && (
-      <Text tag="span" size={ size } text={ text } />
+      <Text
+        tag="span"
+        size={ size }
+        text={ text }
+      />
     ) }
 
     { icon && <Icon icon={ icon } /> }

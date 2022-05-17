@@ -9,7 +9,7 @@ yarn start
 yarn build
 
 # запуск eslint
-yarn lint
+yarn eslint
 
 # запуск stylelint
 yarn stylelint
@@ -19,6 +19,9 @@ yarn types
 
 # переустанавливает зависимости
 yarn reinstall
+
+# устанавливает husky и делает файлы хуков исполняемыми
+yarn husky
 ```
 
 ### Ресурсы

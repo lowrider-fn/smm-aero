@@ -1,6 +1,6 @@
 import { runInAction, makeAutoObservable } from 'mobx';
 
-import type { SigninDataType, SignupDataType } from './interfaces';
+import type { SigninDataType, SignupDataType } from './types';
 
 import { Storage } from '@/utils';
 

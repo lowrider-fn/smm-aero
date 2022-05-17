@@ -1,3 +1,9 @@
-declare type PropsWithClassName<P> = P & { className?: string };
+import type { ReactNode } from 'react';
 
-declare type PropsWithTitle<P> = P & { title?: string };
+declare global {
+ type PropsWithClassName<P> = P & { className?: string };
+
+ type PropsWithRequiredChildren<P> = P & { children: ReactNode };
+
+ type PropsWithTitle<P> = P & { title?: string };
+}

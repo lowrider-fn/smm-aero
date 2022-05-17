@@ -4,7 +4,7 @@ import { DynamicInput } from '../common/DynamicInput';
 
 import { CheckboxStyled, IconStyled, LabelStyled } from './styled';
 
-import type { CheckboxProps } from './interfaces';
+import type { CheckboxProps } from './types';
 import type { ChangeEvent, PropsWithChildren } from 'react';
 
 export const Checkbox = <T,>({

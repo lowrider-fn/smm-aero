@@ -2,12 +2,11 @@ import { useState } from 'react';
 
 import { FieldStyled, FormFieldStyled, LabelStyled, TextStyled } from './styled';
 
-import type { FC } from 'react';
-import type { FormFieldProps } from './interfaces';
+import type { FormFieldProps } from './types';
 
 import { Text } from '@/components/ui/Text';
 
-export const FormField: FC<PropsWithClassName<FormFieldProps>> = ({
+export const FormField = ({
   children,
   hasError,
   hasDirty = true,
@@ -16,7 +15,7 @@ export const FormField: FC<PropsWithClassName<FormFieldProps>> = ({
   label,
   disabled,
   className = ''
-}) => {
+}: PropsWithRequiredChildren<PropsWithClassName<FormFieldProps>>) => {
   const [dirty, setDirty] = useState(hasDirty);
 
   const errorText = dirty && hasError && !disabled && error;

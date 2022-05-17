@@ -2,7 +2,7 @@ import { SignupForm } from './SignupForm';
 import { ControlsStyled, HeaderStyled, NavStyled } from './styled';
 import { SigninForm } from './SigninForm';
 
-import type { HeaderProps } from './interfaces';
+import type { HeaderProps } from './types';
 import type { SigninDataType, SignupDataType } from '@/store';
 
 import { useToggle } from '@/hooks';
@@ -30,16 +30,15 @@ export const Header = ({
   return (
     <HeaderStyled>
       <NavStyled>
-        {
-          (isAuth && (
-            <Button
-              mode="success"
-              size="m"
-              text="Выйти"
-              title="Выйти из личного кабинета"
-              onClick={ onLogout }
-            />
-          ))
+        { (isAuth && (
+        <Button
+          mode="success"
+          size="m"
+          text="Выйти"
+          title="Выйти из личного кабинета"
+          onClick={ onLogout }
+        />
+        ))
           || (
             <ControlsStyled>
               <Button
@@ -59,8 +58,7 @@ export const Header = ({
                 onClick={ toggleShowingSignup }
               />
             </ControlsStyled>
-          )
-        }
+          ) }
       </NavStyled>
 
       { isShowSignup && (

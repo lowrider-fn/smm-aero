@@ -4,9 +4,15 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
+  // "stylelint.validate": [
+  //   "css",
+  //   "less",
+  //   "scss"
+  // ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
+    // "source.fixAll.stylelint": true
   },
   "stylelint.autoFixOnSave": true,
   "redhat.telemetry.enabled": true,
@@ -24,5 +30,14 @@
   },
   "[typescriptreact]": {
     "editor.formatOnSave": false
-  }
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[less]": {
+    "editor.formatOnSave": false
+  },
 }

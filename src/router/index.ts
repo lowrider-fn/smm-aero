@@ -1,3 +1,3 @@
 export { Router } from './Router';
-export * from './interfaces';
+export * from './types';
 export * from './constants';

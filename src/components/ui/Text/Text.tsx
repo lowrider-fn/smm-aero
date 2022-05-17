@@ -1,16 +1,16 @@
 import { TextStyled } from './styled';
 
-import type { FC } from 'react';
-import type { TextProps } from './interfaces';
+import type { PropsWithChildren } from 'react';
+import type { TextProps } from './types';
 
-export const Text: FC<PropsWithClassName<TextProps>> = ({
+export const Text = ({
   text,
   children,
   className = '',
   tag = 'p',
   size = 's',
   ...rest
-}) => (
+}: PropsWithChildren<PropsWithClassName<TextProps>>) => (
   <TextStyled
     as={ tag }
     className={ className }

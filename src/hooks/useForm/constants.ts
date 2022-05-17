@@ -1,6 +1,6 @@
 import { string, addMethod } from 'yup';
 
-import { YupMethod } from './interfaces';
+import { YupMethod } from './types';
 
 export const REQUIRED_TEXT_EMAIL = 'Введите E-mail';
 export const REQUIRED_TEXT_PASSWORD = 'Введите пароль';

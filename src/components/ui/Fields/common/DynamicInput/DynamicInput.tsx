@@ -3,7 +3,7 @@ import { useState, forwardRef } from 'react';
 import { DynamicInputStyled } from './styled';
 
 import type { FocusEvent } from 'react';
-import type { DynamicInputProps } from './interfaces';
+import type { DynamicInputProps } from './types';
 
 export const DynamicInput = forwardRef(({
   className = '',

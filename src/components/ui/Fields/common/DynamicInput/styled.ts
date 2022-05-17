@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import { DynamicInputType } from './interfaces';
+import { DynamicInputType } from './types';
 
-import type { DynamicInputProps } from './interfaces';
+import type { DynamicInputProps } from './types';
 
 const snakeAnimation = keyframes`
   10%,

@@ -1,8 +1,8 @@
 import { IconAccept, IconClose, IconEye, IconEyeCrossed, IconUser } from './assets';
 import { DEFAULT_ICON_SIZE } from './constants';
-import { IconGlyph } from './interfaces';
+import { IconGlyph } from './types';
 
-import type { IconProps } from './interfaces';
+import type { IconProps } from './types';
 
 export const Icon = ({
   icon,

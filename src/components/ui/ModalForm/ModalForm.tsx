@@ -1,13 +1,11 @@
-import type { FC } from 'react';
-import type { ModalFormProps } from './interfaces';
+import { Form } from '../Form';
+import { Modal } from '../Modal';
 
-import { Form } from '@/components/ui/Form/Form';
-import { Modal } from '@/components/ui/Modal';
+import type { FormProps } from '../Form';
+import type { ModalProps } from '../Modal';
 
-export const ModalForm: FC<ModalFormProps> = ({ onClose, title, ...formProps }) => (
-
+export const ModalForm = ({ onClose, title, ...formProps }: PropsWithRequiredChildren<ModalProps & FormProps>) => (
   <Modal title={ title } onClose={ onClose }>
     <Form { ...formProps } />
   </Modal>
-
 );

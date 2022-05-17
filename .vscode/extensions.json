@@ -1,8 +1,10 @@
 {
   "recommendations": [
+    "ms-vscode.vscode-typescript-next",
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "ms-vscode.vscode-typescript-next",
+    "stylelint.vscode-stylelint",
     "hex-ci.stylelint-plus",
     "cssho.vscode-svgviewer",
     "shadowtime2000.eta-vscode",

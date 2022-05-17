@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router';
 
-import type { RedirectRouteProps } from './interfaces';
+import type { RedirectRouteProps } from './types';
 
 export const RedirectRoute = ({
   middleware = true,

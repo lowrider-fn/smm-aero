@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { ButtonIconPosition, ButtonMode } from './interfaces';
+import { ButtonIconPosition, ButtonMode } from './types';
 
-import type { ButtonProps } from './interfaces';
+import type { ButtonProps } from './types';
 
 const ButtonCSS = css`
   width: fit-content;

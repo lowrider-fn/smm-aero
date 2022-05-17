@@ -8,7 +8,7 @@ import { Link } from '../../ui/Link';
 import { INITIAL_FORM, VALIDATION } from './constants';
 import { DescriptionStyled, BoxStyled, TextGreenStyled, TextGreyStyled } from './styled';
 
-import type { SignupFormProps } from './interfaces';
+import type { SignupFormProps } from './types';
 
 import { useForm } from '@/hooks/useForm';
 import { SignupFieldName } from '@/store';
@@ -44,8 +44,10 @@ export const SignupForm = ({ onSubmit, onClose, onSignin }: SignupFormProps) => 
       <DescriptionStyled>
         Регистрация занимает 30 секунд.
         <br />
+
         После регистрации вы получите
         <br />
+
         <TextGreenStyled tag="span" text="7 дней бесплатного доступа." />
       </DescriptionStyled>
 
@@ -81,6 +83,7 @@ export const SignupForm = ({ onSubmit, onClose, onSignin }: SignupFormProps) => 
         <TextGreyStyled>
           Я принимаю условия
           { ' ' }
+
           <Link to="#agreement" text="Соглашения" />
         </TextGreyStyled>
       </Checkbox>

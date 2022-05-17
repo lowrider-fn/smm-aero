@@ -3,7 +3,11 @@ import { Text } from '@/components/ui/Text';
 
 const ProfilePage = () => (
   <PageStyled>
-    <Text tag="h1" size="h1" text="Профиль пользователя" />
+    <Text
+      tag="h1"
+      size="h1"
+      text="Профиль пользователя"
+    />
   </PageStyled>
 );
 

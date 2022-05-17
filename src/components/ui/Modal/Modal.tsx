@@ -2,14 +2,13 @@ import { useEffect, useRef } from 'react';
 
 import { ButtonStyled, ModalMaskStyled, ModalStyled, TitleStyled } from './styled';
 
-import type { FC } from 'react';
-import type { ModalProps } from './interfaces';
+import type { ModalProps } from './types';
 
-export const Modal: FC<ModalProps> = ({
+export const Modal = ({
   title,
   onClose,
   children
-}) => {
+}: PropsWithRequiredChildren<ModalProps>) => {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -36,13 +35,18 @@ export const Modal: FC<ModalProps> = ({
   return (
     <ModalMaskStyled ref={ modalRef } onMouseDown={ handleClose }>
       <ModalStyled>
-        <ButtonStyled mode="icon" icon="close" onClick={ onClose } />
+        <ButtonStyled
+          mode="icon"
+          icon="close"
+          onClick={ onClose }
+        />
 
         <TitleStyled
           tag="h2"
           size="h2"
           text={ title }
         />
+
         { children }
       </ModalStyled>
     </ModalMaskStyled>

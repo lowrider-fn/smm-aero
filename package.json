@@ -7,9 +7,9 @@
     "email": "sergey.dolmatskiy@gmail.com"
   },
   "scripts": {
-    "postinstall": "husky install && chmod ug+x .husky/*",
+    "husky": "husky install && chmod ug+x .husky/*",
     "types": "tsc --noEmit",
-    "lint": "eslint --quiet --fix --ext .js,.ts,.tsx .",
+    "eslint": "eslint --quiet --fix --ext .js,.jsx,.ts,.tsx .",
     "stylelint": "stylelint src/**/{styled.ts,*.css} --fix",
     "start": "PORT=8080 FAST_REFRESH=false NODE_ENV=development craco start --config craco.config.js",
     "build": "CI=false GENERATE_SOURCEMAP=false NODE_ENV=production craco build --config craco.config.js",
@@ -20,11 +20,11 @@
     "lodash.isequal": "^4.5.0",
     "mobx": "^6.1.8",
     "mobx-react-lite": "^3.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1",
-    "styled-components": "^5.3.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5",
     "uuid": "^8.3.2",
     "webpack": "^5.66.0",
     "yup": "^0.32.9"
@@ -32,33 +32,32 @@
   "devDependencies": {
     "@craco/craco": "^6.4.3",
     "@types/lodash.isequal": "^4.5.5",
-    "@types/node": "^14.0.11",
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.1",
+    "@types/node": "^17.0.34",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
     "@types/react-router": "^5.1.18",
-    "@types/styled-components": "^5.1.7",
+    "@types/styled-components": "^5.1.25",
     "@types/uuid": "^8.3.1",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "airbnb": "^0.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.22.0",
     "cross-env": "^7.0.2",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-destructure-depth": "^1.0.3",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
     "react-scripts": "^5.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
-    "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^4.1.0",
-    "typescript": "^4.5.3"
+    "typescript": "^4.6.4"
   },
   "browserslist": {
     "production": [
@@ -71,5 +70,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "yarn eslint",
+    "src/**/{styled.ts,*.css}": "yarn stylelint"
   }
 }

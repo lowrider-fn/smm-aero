@@ -1,6 +1,6 @@
 import { safeJsonParce } from '../safeJsonParce';
 
-import type { StorageKey } from './interfaces';
+import type { StorageKey } from './types';
 
 class StorageClass {
   private storage: Storage;

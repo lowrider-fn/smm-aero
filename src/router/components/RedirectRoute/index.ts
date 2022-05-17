@@ -1,2 +1,2 @@
 export * from './RedirectRoute';
-export * from './interfaces';
+export * from './types';
