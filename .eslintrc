@@ -23,6 +23,7 @@
     "plugin:react-hooks/recommended"
   ],
   "rules": {
+    "global-require": "off",
     "linebreak-style": "off",
     "@typescript-eslint/comma-dangle": [
       "error",
@@ -93,6 +94,7 @@
     "destructure-depth/max-depth": [
       "error"
     ],
+    "import/no-dynamic-require": "off",
     "import/extensions": "off",
     "import/order": [
       "error",
