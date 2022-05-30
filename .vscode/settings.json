@@ -18,7 +18,25 @@
     "source.fixAll.stylelint": true
   },
   "redhat.telemetry.enabled": true,
-  "[javascript,javascriptreact,typescript,typescriptreact,css,less,scss]": {
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[less]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
     "editor.formatOnSave": false
   },
   "editor.tabSize": 2,
